@@ -24,6 +24,10 @@ function App() {
     <input ref={inputRef} type="text" placeholder='Enter something' />
 
     <button onClick={() => inputRef.current.focus()}>Focus on input</button>
+
+    <div className="test">
+        Hello this is a useRef test div for focus.
+    </div>
    </>
   )
 }

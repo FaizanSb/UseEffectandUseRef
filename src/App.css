@@ -26,7 +26,12 @@
     inset-inline: 0;
     margin: 0 auto;
   }
-
+  .test {
+    height: 100px;
+    width: 300px;
+    background-color: yellow;
+      margin: 20px auto;      
+  }
   .base {
     width: 170px;
     position: relative;
