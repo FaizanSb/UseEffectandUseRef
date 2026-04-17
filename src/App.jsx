@@ -14,6 +14,12 @@ function App() {
   //   inputRef.current.focus()
   // }
   //  , [])
+  const handleClick = () => {
+    inputRef.current.count++;
+    inputRef.current.style.background = "lightblue";
+    inputRef.current.value = "Faizan";
+  }
+
   
 
   return (
@@ -23,11 +29,12 @@ function App() {
     <h1>Count: {count}</h1>
     <input ref={inputRef} type="text" placeholder='Enter something' />
 
-    <button onClick={() => inputRef.current.focus()}>Focus on input</button>
+    <button onClick={() => handleClick()}>Focus on input</button>
 
-    <div className="test">
+    {/* <div className="test">
         Hello this is a useRef test div for focus.
-    </div>
+    </div> */}
+
    </>
   )
 }
