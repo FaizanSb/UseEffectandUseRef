@@ -16,9 +16,20 @@ function App() {
   //  , [])
   const handleClick = () => {
     inputRef.current.count++;
+    console.log("Count changing in useRef ",inputRef.current.count);
     inputRef.current.style.background = "lightblue";
     inputRef.current.value = "Faizan";
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log("Hello from useEffect with setTimeout");
+      setCount(count + 1);
+    }, 2000);
+
+    return () => clearInterval(timer);
+  }, [])
+
 
   
 
